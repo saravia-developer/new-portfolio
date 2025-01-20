@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let option of options">
+    <button [name]="'btn-' + option.name" (click)="filterProjects(option.name)">{{ option.title }}</button>
+  </li>
+</ul>
+<div id="container-personal-projects">
+  <app-card-for-project
+    [dataProjects]="project"
+    *ngFor="let project of renderProjects"
+  ></app-card-for-project>
+</div>

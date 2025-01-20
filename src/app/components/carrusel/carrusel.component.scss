@@ -1,0 +1,39 @@
+@import "../../../styles/animation/carousel-infinite.module.scss";
+
+:host {
+
+  .technologies-carrusel {
+    width: 84%;
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+    background: white;
+    margin: auto;
+
+
+    .carrusel-track {
+      display: flex;
+      animation: scroll 10s linear infinite;
+      -webkit-animation: scroll 10s linear infinite;
+      width: calc(75px * 44);
+      justify-content: space-evenly;
+      background-color: white;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      img {
+        width: 75px;
+        height: 75px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .swiper {
+    width: 600px;
+    height: 300px;
+  }
+}

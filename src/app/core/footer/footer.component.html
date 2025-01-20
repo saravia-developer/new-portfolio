@@ -1,0 +1,33 @@
+<footer>
+
+  <div>
+    <h3>Menú</h3>
+    <ul class="menú-footer">
+      <a href="#container-banner">
+        <li>
+          <b>Start</b>
+        </li>
+      </a>
+      <a href="#about-me">
+        <li>
+          <b>Personal</b>
+        </li>
+      </a>
+      <a href="#personal-projects">
+        <li>
+          <b>Proyects</b>
+        </li>
+      </a>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Contactame</h3>
+    <div>
+      <a *ngFor="let contact of listContactMe" [href]="contact.href">
+        <img [src]="contact.src" [alt]="contact.alt">
+      </a>
+    </div>
+  </div>
+
+</footer>

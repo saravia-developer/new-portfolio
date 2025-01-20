@@ -1,0 +1,10 @@
+@keyframes scroll {
+  0% {
+    -webkit-animation: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-animation: translate(calc(-75px * 30.6));
+    transform: translate(calc(-75px * 30.6));
+  }
+}

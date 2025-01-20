@@ -1,0 +1,114 @@
+
+:host {
+
+  --color-white: #fff;
+  --color-red: #e74c3c;
+  --color-blue: #5dade2;
+  --color-rose: #f5b7b1;
+  --color-green: #58d68d;
+  --color-purple: #8e44ad;
+  --color-wordpress: linear-gradient(120deg, rgba(253,254,254,1) 50%, rgba(84,153,199,1) 50%);
+  --color-wordpress-hover: linear-gradient(300deg, rgba(253,254,254,1) 50%, rgba(84,153,199,1) 50%);
+  --color-skyblue: #61DBFB;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      list-style: none;
+
+      button {
+        height: 30px;
+        border-radius: 5px;
+        background: var(--color-white);
+        border: none;
+        font-weight: 600;
+        min-width: 120px;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &[name='btn-ALL']{
+          background: var(--color-white);
+        }
+
+        &[name='btn-Angular']{
+          background: var(--color-red);
+        }
+
+        &[name='btn-React']{
+          background: var(--color-skyblue);
+        }
+
+        &[name='btn-Node']{
+          background: var(--color-green);
+        }
+
+        &[name='btn-PHP']{
+          background: var(--color-purple);
+        }
+
+        &[name='btn-WORDPRESS']{
+          background: var(--color-wordpress);
+        }
+
+        &[name='btn-Docker']{
+          background: var(--color-blue);
+        }
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        &:hover:not([name='btn-WORDPRESS']){
+          color: var(--color-white);
+        }
+
+        &[name='btn-ALL']:hover {
+          color: black;
+        }
+
+        &[name='btn-WORDPRESS']:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
+
+    @media screen and (max-width: 769px) {
+      display: grid;
+      grid-template-columns: repeat(3, 160px);
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 481px) {
+      display: grid;
+      grid-template-columns: repeat(2, 130px);
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 325px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 100px);
+      gap: 10px;
+    }
+  }
+
+  #container-personal-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    gap: 20px;
+    place-items: center;
+    padding-top: 30px;
+
+
+    @media screen and (max-width: 769px) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 481px) {
+      grid-template-columns: repeat(auto-fit, 220px);
+      width: 230px;
+      margin: auto;
+    }
+  }
+}

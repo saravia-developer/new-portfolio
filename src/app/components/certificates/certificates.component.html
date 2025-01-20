@@ -1,0 +1,10 @@
+<swiper-container id="certificate">
+  <swiper-slide *ngFor="let certificate of certificatePicture">
+
+    <img
+      [src]="'assets/certificates/' + certificate"
+      [alt]="certificate"
+    />
+
+  </swiper-slide>
+</swiper-container>
